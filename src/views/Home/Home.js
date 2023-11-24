@@ -17,7 +17,7 @@ function Home() {
 
     const checkWinner = () => {
 
-        const symbol = player === 1 ? "🌼" : "🌺";
+        const symbol = player === 1 ? "➕" : "❌";
 
         if (board[1] === symbol && board[2] === symbol && board[3] === symbol) {
             setWinner(player);
@@ -58,28 +58,28 @@ function Home() {
         }
 
         if (player === 1) {
-            setBoard({ ...board, [boxNo]: "🌼" })
+            setBoard({ ...board, [boxNo]: "➕" })
         }
         else {
-            setBoard({ ...board, [boxNo]: "🌺" })
+            setBoard({ ...board, [boxNo]: "❌" })
         }
 
     }
 
-    const reset = () =>{
-       setPlayer(1);
-       setBoard({
-        1:"",
-        2:"",
-        3:"",
-        4:"",
-        5:"",
-        6:"",
-        7:"",
-        8:"",
-        9:"",
-       }) 
-       setWinner(null);
+    const reset = () => {
+        setPlayer(1);
+        setBoard({
+            1: "",
+            2: "",
+            3: "",
+            4: "",
+            5: "",
+            6: "",
+            7: "",
+            8: "",
+            9: "",
+        })
+        setWinner(null);
     }
     useEffect(() => {
         checkWinner(player);
@@ -87,23 +87,26 @@ function Home() {
     return (
         <>
             <div>
-                <h1 className='heading' >Tic Tac Tangle</h1>
+                <h3 className='heading' >Tic Tac Tangle</h3>
                 <div className='players-container'>
-                    <span className='player-title'>Player 1:🌼</span>
-                    <span className='current-player'>
-                    Current Player:{player === 1 ? "🌼" : "🌺"}
-                </span>
+                    <span className='player-title'>Player 1:➕</span>
 
-                    <span className='player-title'>Player 2:🌺</span>
+                    <span className='player-title'>Player 2:❌</span>
                 </div>
-               
+                <div className='current-player-conteiner'>
+                    <span className='current-player'>
+                        Current Player:{player === 1 ? " player 1 ➕" : " player 2❌"}
+                    </span>
+                </div>
+
+
 
                 {
                     winner ?
-                    (
-                        <h1 className='winner-text'>Winner is {winner === 1 ? "🌼" : "🌺"}</h1>
-                    ) : null
-
+                        (
+                            <h3 className='winner-text'>Winner is {winner === 1 ? " Player 1➕" : " Player 2❌"}</h3>
+                        ) : null
+                        
                 }
 
 
