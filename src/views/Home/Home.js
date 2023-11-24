@@ -95,7 +95,7 @@ function Home() {
                 </div>
                 <div className='current-player-conteiner'>
                     <span className='current-player'>
-                        Current Player:{player === 1 ? " player 1 ➕" : " player 2❌"}
+                        Current Player = {player === 1 ? " Player 1 ➕" : " Player 2❌"}
                     </span>
                 </div>
 

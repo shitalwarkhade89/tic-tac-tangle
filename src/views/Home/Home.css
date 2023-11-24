@@ -68,18 +68,15 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #fff;
     padding: 5px 30px;
-    border-radius: 10px;
+   
     
-}
-
-.current-player {
-  text-align: center;
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .current-player-conteiner{
     text-align: center;
     margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
 
@@ -110,20 +107,29 @@ body {
     font-size: 23px;
 }
 
-@media screen and (min-width: 600px) and (max-width: 768px) {
+@media screen and (min-width: 340px) and (max-width: 768px) {
     .heading {
+        font: size 35px; 
         display: block;
         margin: 10px auto;
-        width: 40% 
+        width: 80%;
+        padding: 5px 20px;
+        
     }
     .player-title{
-        font-size: 25px;
+        font-size: 18px;
     }
     .players-container{
-        margin-top: 15px;
+       margin-top:30px ;
 
     }
-    .current-player{
-        margin-top: 15px;
+    .current-player-conteiner{
+        margin-top:30px;
+
+    }
+    .box{
+        width: 90px;
+        height: 90px;
+
     }
   }
