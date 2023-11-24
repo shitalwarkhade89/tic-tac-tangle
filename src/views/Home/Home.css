@@ -114,13 +114,16 @@ body {
     .heading {
         display: block;
         margin: 10px auto;
-        width: 50% 
+        width: 40% 
     }
     .player-title{
         font-size: 25px;
     }
     .players-container{
-        margin-top: 20px;
-        
+        margin-top: 15px;
+
+    }
+    .current-player{
+        margin-top: 15px;
     }
   }
