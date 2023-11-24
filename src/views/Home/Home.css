@@ -109,3 +109,18 @@ body {
     box-shadow: 0 0 20px 10px #f0aecf;
     font-size: 23px;
 }
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    .heading {
+        display: block;
+        margin: 10px auto;
+        width: 50% 
+    }
+    .player-title{
+        font-size: 25px;
+    }
+    .players-container{
+        margin-top: 20px;
+        
+    }
+  }
