@@ -1,5 +1,6 @@
 import react, { useEffect, useState } from 'react';
 import './Home.css';
+import Confetti from 'react-confetti'
 function Home() {
     const [player, setPlayer] = useState(1);
     const [board, setBoard] = useState({
@@ -86,6 +87,11 @@ function Home() {
     }, [board])
     return (
         <>
+        <div>
+            {
+                winner !==null ?<Confetti/> :""
+            }
+        </div>
             <div>
                 <h3 className='heading' >Tic Tac Tangle</h3>
                 <div className='players-container'>
@@ -99,17 +105,12 @@ function Home() {
                     </span>
                 </div>
 
-
-
                 {
                     winner ?
                         (
                             <h3 className='winner-text'>Winner is {winner === 1 ? " Player 1➕" : " Player 2❌"}</h3>
-                        ) : null
-                        
+                        ) : null       
                 }
-
-
                 <div className='board'>
                     <div className='row'>
                         <div className='box' onClick={() => { play(1) }}>
